@@ -4,12 +4,13 @@
 ## To Set Up Dev Environment:
 Within the root directory of this project, do the following:
 
-1. Add a **.env** file with two values:
-MNEMONIC="seed words go here"
-INFURA_URL=https://rinkeby.infura.io/v3/ACCESS_TOKEN_GOES_HERE
+1. Add a **.env** file with two values:  
 
-MNEMONIC is equal to the 12 seed words that were generated when you generated a private key using a tool like Meta Mask.
-INFURA_URL is equal to the https://rinkeby.infura.io/v3/ + your access token
+MNEMONIC="seed words go here"  
+INFURA_URL=https://rinkeby.infura.io/v3/ACCESS_TOKEN_GOES_HERE  
+
+MNEMONIC is equal to the 12 seed words that were generated when you generated a private key using a tool like Meta Mask.  
+INFURA_URL is equal to the https://rinkeby.infura.io/v3/ + your access token  
 
 2. Run `npm install truffle truffle-hdwallet-provider dotenv`
 
