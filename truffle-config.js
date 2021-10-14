@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -18,10 +20,12 @@
  *
  */
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
-//
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
+const HDWalletProvider = require('truffle-hdwallet-provider');
+
+//const fs = require('fs');
+//const mnemonic = fs.readFileSync(".env").toString().trim();
+const mnemonic = process.env.MNEMONIC;
+const infura_url = process.env.INFURA_URL;
 
 module.exports = {
   /**
@@ -40,6 +44,19 @@ module.exports = {
     // You should run a client (like ganache-cli, geth or parity) in a separate terminal
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
+
+    // Configuration for rinkeby network
+    rinkeby: {
+      // Special function to setup the provider
+      provider: function () {
+        // Setting the provider with the Infura Rinkeby address and Token
+        return new HDWalletProvider(mnemonic, infura_url)
+      },
+      // Network id is 4 for Rinkeby
+      network_id: 4,
+      gas: 4500000,
+      gasPrice: 10000000000,
+    }
     //
     // development: {
     //  host: "127.0.0.1",     // Localhost (default: none)
