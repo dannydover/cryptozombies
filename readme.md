@@ -1,7 +1,7 @@
-#Contract Info#
+# Contract Info
 [CryptoZombies](https://rinkeby.etherscan.io/address/0xB4fdb624Ba48d78Da8aA91E3E05A45358fE08BF0): 0xB4fdb624Ba48d78Da8aA91E3E05A45358fE08BF0
 
-##To (Re)deploy:##
+## To (Re)deploy:
 
 Use Truffle Console to deploy:
 
